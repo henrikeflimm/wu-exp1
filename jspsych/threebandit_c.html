@@ -1570,14 +1570,14 @@ function saveDataLocally() {
 }
 
 // Example: Add this to your experiment's timeline to provide a download option
-var downloadData = {
+/*var downloadData = {
   type: jsPsychHtmlButtonResponse,
   stimulus: '<p>Thank you for participating! Click below to download your data.</p>',
   choices: ['Download Data'],
   on_finish: function() {
     saveDataLocally();
   }
-};
+};*/
 
 //------------------------------------
 // Put it all in a timeline
@@ -1607,7 +1607,7 @@ var downloadData = {
     block_end,
     survey,                   // questionnaire
     expt_end,
-    downloadData // save_data !! --> for now: save as local csv file
+    //downloadData // save_data !! --> for now: save as local csv file
   ]
 
 //------------------------------------
