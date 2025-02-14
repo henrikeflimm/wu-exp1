@@ -6,3 +6,4 @@ var task_stimuli = [
     //{left_stim_number: 2, middle_stim_number: 0, right_stim_number: 1}
 ];
 
+/* stimulus position not randomized (//) */
