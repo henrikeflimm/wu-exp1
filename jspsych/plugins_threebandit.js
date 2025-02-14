@@ -1,5 +1,5 @@
 // Plugins
-// imported to experiment.html
+// imported to threebandit.html
 
 var jsPsychThreeArmedBandit = (function (jspsych) { 
     'use strict';
@@ -129,7 +129,7 @@ var jsPsychThreeArmedBandit = (function (jspsych) {
             DrawBackground(isPracticePhase);
 
             
-          //container for key responses (~empty data frame in R?)
+          //container for key responses
           var response = {
           rt: null,
           key: null,
@@ -173,9 +173,6 @@ var jsPsychThreeArmedBandit = (function (jspsych) {
         info_text = "Block " + counter.block + " of " + counter.n_blocks + ", Trial " + counter.trial + " of " + trial.n_trials;
       }
 
-
-
-      /*var info_text = "Block " + counter.block + " of " + counter.n_blocks + ", Trial " + counter.trial + " of " + trial.n_trials; */
       ctx.fillText(info_text, trial.canvas_dimensions[0]/2, 3* ctx.measureText('M').width/2); 
 
 
