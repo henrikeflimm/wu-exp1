@@ -1,5 +1,5 @@
 // Plugins
-// imported to experiment.html
+// imported to threebandit.html
 
 var jsPsychThreeArmedBandit = (function (jspsych) { 
     'use strict';
@@ -619,10 +619,6 @@ var jsPsychThreeArmedBandit = (function (jspsych) {
     }
     
   
-    
-    
-      
-    
 
       // draw the updated stimuli to the screen
       DrawScreen(ctx);
