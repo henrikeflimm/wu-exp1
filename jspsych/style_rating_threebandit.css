@@ -2,18 +2,6 @@ body{
     background: #fff;
   }
 
-.canvas-style {
-  outline: none;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-}
-
   .slider-wrapper{
     position: relative;
     margin: 1rem;
