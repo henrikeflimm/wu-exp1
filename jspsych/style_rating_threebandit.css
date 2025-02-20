@@ -1,0 +1,202 @@
+body{
+    background: #fff;
+  }
+
+  .slider-wrapper{
+    position: relative;
+    margin: 1rem;
+  }
+
+  
+  .slider-wrapper span{
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    margin-left: 20px;
+    font-size: 2rem;
+    }
+
+
+    /* Style the text */
+    .slider-label {
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+      }
+  
+      .A-text {
+        color: rgb(0, 123, 255); /* blue color */
+      }
+  
+      .B-text {
+        color: rgb(255, 0, 0); /* red color */
+      }
+
+      .C-text {
+        color: rgb(0, 128, 0); /* green color */
+      }
+
+    /* Hide the default jsPsych button */
+    .jspsych-btn {
+        /*display: none;*/
+        color: black;
+        background-color: white;
+    }
+    /* Display button */
+    .confirm-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: not-allowed;
+    }
+    
+    .confirm-button:enabled {
+        cursor: pointer;
+        background-color: #7d7d7ddf;
+    }
+
+    .confirm-button:disabled {
+        cursor: default; /* Keep the default cursor (or you can use 'pointer' if you want the pointer even when disabled) */
+        background-color: #ffffff;
+    }
+
+    #submit-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: grey;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: not-allowed;
+  }
+  
+  #submit-button:enabled {
+      background-color: #7d7d7ddf; /* grey */
+      cursor: pointer;
+  }
+
+  #submit-button:disabled {
+    cursor: default; /* Keep the default cursor (or you can use 'pointer' if you want the pointer even when disabled) */
+    background-color: #ffffff;
+}
+
+
+    .container {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-sizing: border-box; /* Prevent content overflow */
+        width: 100%; /* Ensure the container spans the width */
+        height: 70%; /* Give enough space for both the stimulus and the sliders */
+      }
+      
+      .stimulus-text {
+        font-size: 20px;
+        position: absolute;
+        top: 20%;
+        right: 25%;
+        left: 25%;
+        max-width: 80%; /* Restrict text width */
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+    
+      .slider-container {
+        margin: 20px 0;
+        width: 80%;
+        max-width: 500px;
+      }
+      
+      
+
+    .range-slider {
+        position: relative;
+        height: 30px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .slider-track {
+        position: absolute;
+        width: 100%;
+        height: 6px;
+        background: #ccc; /* Light gray to make the full slider visible */
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 0;
+        border-radius: 3px;
+      }
+
+      .slider {
+        position: absolute;
+        width: 100%;
+        pointer-events: none;
+        appearance: none;
+        background: transparent;
+        -webkit-appearance: none;
+        z-index: 2;
+      }
+      
+      .slider::-webkit-slider-thumb {
+        pointer-events: auto;
+        width: 16px;
+        height: 16px;
+        background: #fff;
+        border: 2px solid black;
+        cursor: pointer;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      
+      .range-bar {
+        position: absolute;
+        height: 6px;
+        background: currentColor;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+
+      .container-rating { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        margin-top: 20px; 
+      }
+    
+      .tooltip { 
+        position: absolute; 
+        background: white; 
+        padding: 5px; 
+        border: 1px solid black; 
+        font-size: 14px; 
+        display: none; 
+      }
+
+      #feedbackBox {
+        pointer-events: none;  /* Makes it click-through */
+    }
+
+
+
