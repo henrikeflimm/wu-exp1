@@ -642,7 +642,7 @@ var jsPsychThreeArmedBandit = (function (jspsych) {
     
 
       // draw the updated stimuli to the screen
-      DrawScreen(ctx);
+      updateScreen();
 
       // set a timeout to end the trial after a given delay
      jsPsych.pluginAPI.setTimeout(function() {
