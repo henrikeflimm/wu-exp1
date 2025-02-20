@@ -122,8 +122,8 @@ var jsPsychThreeArmedBandit = (function (jspsych) {
 
 
             // define new HTML, add canvas, and draw a blank background
-            var new_html = `<canvas id="trial_canvas" width="${trial.canvas_dimensions[0]}" height="${trial.canvas_dimensions[1]}" class="canvas-style" style="position: absolute; top: 0; left: 0; z-index: 1;"></canvas>
-  <canvas id="feedback_canvas" width="${trial.canvas_dimensions[0]}" height="${trial.canvas_dimensions[1] * 2}" class="canvas-style" style="position: absolute; top: 0; left: 0; z-index: 2;"></canvas>`;
+            var new_html = `<canvas id="trial_canvas" width="${trial.canvas_dimensions[0]}" height="${trial.canvas_dimensions[1]}" style="position: absolute; top: 0; left: 0; z-index: 1;"></canvas>
+            <canvas id="feedback_canvas" width="${trial.canvas_dimensions[0]}" height="${trial.canvas_dimensions[1] * 2}" style="position: absolute; top: 0; left: 0; z-index: 2;"></canvas>`;
             display_element.innerHTML = new_html;
             var ctx = document.getElementById('trial_canvas').getContext('2d');
             DrawBackground(isPracticePhase);
