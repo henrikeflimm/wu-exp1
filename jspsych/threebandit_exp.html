@@ -1161,6 +1161,7 @@ var expt_end = {
   var choiceTrials = function() {
     return { 
     timeline_variables: task_stimuli, 
+    render_on_canvas: false,
     sample: {
         type: 'with-replacement',
          size: sampleSize() // use the first entry from intervR
@@ -1287,6 +1288,7 @@ var expt_end = {
   var practice_ChoiceTrials = function() {
     return { 
     timeline_variables: task_stimuli, 
+    render_on_canvas: false,
     sample: {
         type: 'with-replacement',
          size: 5 
