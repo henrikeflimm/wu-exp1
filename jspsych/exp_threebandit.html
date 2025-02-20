@@ -68,7 +68,7 @@ console.log("Condition: " + condition_assignment)
 // preload
 var preload = {
     type: jsPsychPreload,
-    images: ['imgA.png', 'imgB.png', 'imgC.png'] 
+    auto_preload: true 
 };
 
 // define welcome message
@@ -147,8 +147,6 @@ var expt_end = {
     queues.str3 = str3;
     queues.practice = practice_queue_3arm; // practice trials
 
-  // randomise allocation of image numbers to payout numbers //??
-  //var stim_allocation = jsPsych.randomization.sampleWithoutReplacement([...Array(stimuli.length).keys()], queues.ind1.length);
 
   // set up block and trial counters
   var counter = {};
@@ -414,7 +412,7 @@ var expt_end = {
 
     //------------------------------------
     // Practice trials - Rating task
-    //------------------------------------   // at the end of practice: Do you want to start with the experiment or do you want to go back to the instructions?
+    //------------------------------------   
 
 
     var practiceRatingTrial_1 = { 
@@ -1313,11 +1311,7 @@ var expt_end = {
   
 
 
-
-  // debriefing page? 
-  // save_data !!
-
-
+    
 //------------------------------------
 // Declaration of consent
 //------------------------------------
@@ -1647,14 +1641,8 @@ var downloadData = {
 // Put it all in a timeline
 //------------------------------------
     
-  var timeline = [
-    preload,
-    welcome,
-    fullscreen_on,
-    block
-  ]
 
-  var timeline1 = [ 
+  var timeline = [ 
     welcome,
     fullscreen_on,
     consent,
