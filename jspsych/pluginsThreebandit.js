@@ -307,14 +307,7 @@ var jsPsychThreeArmedBandit = (function (jspsych) {
           });
         }
         
-        // Call updateScreen instead of DrawScreen directly
-        document.addEventListener('keydown', (event) => {
-          // Update your logic for handling keypresses
-          handleKeyPress(event);
-        
-          // Trigger the screen update
-          updateScreen();
-        });
+        updateScreen();
 
       // set a timeout to display the feedback after a given delay
       jsPsych.pluginAPI.setTimeout(function() {
