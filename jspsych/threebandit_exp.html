@@ -64,7 +64,12 @@ console.log("Condition: " + condition_assignment)
   });
 
 
-
+// preload
+var preload = {
+    type: jsPsychPreload,
+    auto_preload: true 
+}
+  
 // define welcome message
 var welcome = {
     type: jsPsychHtmlKeyboardResponse,
@@ -1642,6 +1647,7 @@ var downloadData = {
   var timeline = [ 
     welcome,
     fullscreen_on,
+    preload,
     consent,
     instructions_choiceTask,
     practice_ChoiceTrials(),  // practice choice task
