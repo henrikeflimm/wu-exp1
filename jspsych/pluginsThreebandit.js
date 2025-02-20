@@ -223,6 +223,9 @@ var jsPsychThreeArmedBandit = (function (jspsych) {
   
 
     function DrawScreen() {
+      // Clear the canvas
+      ctx.clearRect(0, 0, trial.canvas_dimensions[0], trial.canvas_dimensions[1]);
+
 
       // if the left stimulus is selected, show the appropriate selection box
       if (display.left_box == "selected"){
@@ -297,7 +300,21 @@ var jsPsychThreeArmedBandit = (function (jspsych) {
 
 
       // update the screen with the pressed key
-      DrawScreen(ctx);
+      // Wrap the drawing logic in a function triggered by requestAnimationFrame
+        function updateScreen() {
+          requestAnimationFrame(() => {
+            DrawScreen(ctx);
+          });
+        }
+        
+        // Call updateScreen instead of DrawScreen directly
+        document.addEventListener('keydown', (event) => {
+          // Update your logic for handling keypresses
+          handleKeyPress(event);
+        
+          // Trigger the screen update
+          updateScreen();
+        });
 
       // set a timeout to display the feedback after a given delay
       jsPsych.pluginAPI.setTimeout(function() {
