@@ -152,6 +152,13 @@ var jsPsychThreeArmedBandit = (function (jspsych) {
 
     /// TRIAL LOOP ///
 
+    function startRendering() {
+    function render() {
+        DrawScreen();
+        requestAnimationFrame(render);
+    }
+    render();
+}
     
 
     function DrawBackground(isPracticePhase){
@@ -223,6 +230,10 @@ var jsPsychThreeArmedBandit = (function (jspsych) {
   
 
     function DrawScreen() {
+
+        // Clear the canvas before each redraw
+    ctx.clearRect(0, 0, trial.canvas_dimensions[0], trial.canvas_dimensions[1]);
+
 
       // if the left stimulus is selected, show the appropriate selection box
       if (display.left_box == "selected"){
@@ -711,9 +722,10 @@ var jsPsychThreeArmedBandit = (function (jspsych) {
       var selection_horiz_loc = (trial.canvas_dimensions[0]/2) + stimulus_horiz_offset  - (trial.stimulus_dimensions[0] / 2) - trial.selection_pen_width;
       var stim_vert_loc = (trial.canvas_dimensions[1]/2) + stimulus_vert_offset  - (trial.stimulus_dimensions[1] / 2) - trial.selection_pen_width; // specifies the y coordinate of the top left corner of the stimulus
 
+      ctx.fillStyle = colour;
+
       ctx.fillRect(selection_horiz_loc, stim_vert_loc, trial.stimulus_dimensions[0] + (2 * trial.selection_pen_width), trial.stimulus_dimensions[1] + (2 * trial.selection_pen_width));
 
-      ctx.fillStyle = colour;
     
 
     } // end _DrawSelectionBox function
