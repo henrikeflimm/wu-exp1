@@ -306,7 +306,7 @@ var jsPsychThreeArmedBandit = (function (jspsych) {
       // update the screen with the pressed key
      
       //updateScreen();
-      DrawBackground();
+      DrawBackground(isPracticePhase);
       DrawScreen(ctx);
 
       // set a timeout to display the feedback after a given delay
