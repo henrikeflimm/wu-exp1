@@ -1,2 +1,2 @@
-# threebandit-exp1
-Experiment 1: Three-armed bandit task
+# wu-exp1
+Experiment 1: Four-armed bandit task
